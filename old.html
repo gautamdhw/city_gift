@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>City Gift Advertiser – Custom Corporate Gifting & Branding in Punjab</title>
+    <meta name="description" 
+    content="Corporate gifting studio in Punjab offering custom printing on bags, mugs, diaries, T-shirts and more. Fast turnaround & bulk discounts.">
+
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="canonical" href="https://citygiftadvertiser.shop/" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="City Gift Advertiser – Custom Corporate Gifting & Branding"
+    />
+    <meta
+      property="og:description"
+      content="Custom branding on mugs, diaries, calendars, T-shirts and more. Fast turnaround & bulk discounts."
+    />
+    <meta property="og:type" content="business.business" />
+    <meta
+      property="og:image"
+      content="https://citygiftadvertiser.shop/og-cover.jpg"
+    />
+    <meta property="og:url" content="https://citygiftadvertiser.shop/" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="City Gift Advertiser – Custom Corporate Gifting & Branding"
+    />
+    <meta
+      name="twitter:description"
+      content="Custom branding on mugs, diaries, calendars, T-shirts and more."
+    />
+    <meta
+      name="twitter:image"
+      content="https://citygiftadvertiser.shop/og-cover.jpg"
+    />
+
+    <!-- LocalBusiness JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "City Gift Advertiser",
+        "image": "https://your-domain.example/og-cover.jpg",
+        "telephone": "+91 93168 73242",
+        "email": "mailto:citygiftabohar2017@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Patel Nagar",
+          "addressLocality": "Abohar",
+          "addressRegion": "Punjab",
+          "addressCountry": "IN"
+        },
+        "url": "https://citygiftadvertiser.shop/",
+        "sameAs": ["https://wa.me/919316873242"],
+        "priceRange": "₹₹",
+        "areaServed": "IN"
+      }
+    </script>
+
+    <!-- Avoid theme flash: set initial theme ASAP -->
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem("theme");
+          const systemPrefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+          if (stored === "dark" || (!stored && systemPrefersDark)) {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+          }
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- Tailwind CDN + enable class-based dark mode -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+
+    <!-- Preload first hero image for faster LCP -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1536305030010-6d2b8a3f8b47?q=80&w=1600&auto=format&fit=crop"
+      imagesrcset="https://images.unsplash.com/photo-1536305030010-6d2b8a3f8b47?q=80&w=1200&auto=format&fit=crop 1200w,
+                   https://images.unsplash.com/photo-1536305030010-6d2b8a3f8b47?q=80&w=1600&auto=format&fit=crop 1600w"
+      fetchpriority="high"
+    />
+
+    <style>
+      .product-img {
+        object-fit: cover;
+        height: 220px;
+        width: 100%;
+        border-radius: 0.5rem;
+      }
+      /* (old) .hero-bg is no longer used by the hero; kept for safety if referenced elsewhere */
+      .hero-bg {
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 255, 255, 0.2)
+          ),
+          url("https://images.unsplash.com/photo-1536305030010-6d2b8a3f8b47?q=80&w=1600&auto=format&fit=crop")
+            center/cover no-repeat;
+      }
+      /* lightbox */
+      .lb {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        z-index: 60;
+      }
+      .lb-inner {
+        position: relative;
+        max-width: 95%;
+        max-height: 90%;
+      }
+      .lb img {
+        display: block;
+        max-width: 100%;
+        max-height: 80vh;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        transition: opacity 150ms ease;
+      }
+      .lb .nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 2rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 0.5rem;
+        background: rgba(0, 0, 0, 0.35);
+        cursor: pointer;
+        user-select: none;
+      }
+      .lb .nav:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .lb .prev {
+        left: -2rem;
+      }
+      .lb .next {
+        right: -2rem;
+      }
+      .lb .close-btn {
+        position: absolute;
+        top: -2.2rem;
+        right: -1rem;
+        color: white;
+        font-size: 2rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      @media (max-width: 640px) {
+        .lb .prev {
+          left: 0;
+        }
+        .lb .next {
+          right: 0;
+        }
+      }
+
+      /* ===== Rotating hero background ===== */
+      #hero-rotator {
+        position: absolute;
+        inset: 0;
+      }
+      #hero-rotator .slide {
+        position: absolute;
+        inset: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 800ms ease;
+        will-change: opacity;
+      }
+      #hero-rotator .slide.is-active {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body
+    class="font-sans antialiased bg-white text-gray-800 dark:bg-gray-950 dark:text-gray-100"
+  >
+    <a
+      href="#home"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 bg-indigo-600 text-white px-3 py-2 rounded-md z-50"
+      >Skip to content</a
+    >
+
+    <!-- NAV -->
+    <nav
+      class="bg-white/90 dark:bg-gray-900/80 backdrop-blur sticky top-0 z-40 shadow-sm"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-4">
+            <div class="text-2xl font-bold text-indigo-600">
+              City Gift Advertiser
+            </div>
+            <div class="hidden md:flex items-center gap-6 text-sm">
+              <a href="#home" class="hover:text-indigo-600">Home</a>
+              <a href="#products" class="hover:text-indigo-600">Products</a>
+              <a href="#about" class="hover:text-indigo-600">About</a>
+              <a href="#contact" class="hover:text-indigo-600">Contact</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <a
+              href="https://wa.me/919316873242"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hidden sm:inline-block bg-green-500 text-white px-3 py-2 rounded-md text-sm"
+              >WhatsApp</a
+            >
+            <!-- THEME TOGGLE -->
+            <button
+              id="themeToggle"
+              class="p-2 rounded-md border border-gray-300/70 dark:border-gray-600/60"
+              aria-label="Toggle dark mode"
+              aria-pressed="false"
+              title="Toggle theme"
+            >
+              <span id="themeIconSun" aria-hidden="true" class="hidden"
+                >☀️</span
+              >
+              <span id="themeIconMoon" aria-hidden="true" class="">🌙</span>
+            </button>
+            <button
+              id="menuBtn"
+              class="md:hidden p-2"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+              aria-label="Toggle menu"
+            >
+              ☰
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
+        <a href="#products" class="block py-2">Products</a>
+        <a href="#about" class="block py-2">About</a>
+        <a href="#contact" class="block py-2">Contact</a>
+      </div>
+    </nav>
+
+    <!-- HERO (auto-rotating banner) -->
+    <header id="home" class="relative py-24 overflow-hidden">
+      <!-- Rotating background -->
+      <div id="hero-rotator" class="absolute inset-0"></div>
+
+      <!-- gradient overlay (stays constant above background) -->
+      <div
+        class="pointer-events-none absolute inset-0"
+        style="
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 255, 255, 0.2)
+          );
+        "
+      ></div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+              Custom Printing for Gifts & Branding
+            </h1>
+            <p class="mt-4 text-lg text-gray-700 dark:text-gray-300">
+              Bags, Lunch Boxes, Pens, Keychains and corporate giveaways — high
+              quality printing with fast turnaround and bulk discounts.
+            </p>
+            <div class="mt-6 flex gap-3">
+              <a
+                href="#products"
+                class="bg-indigo-600 text-white px-5 py-3 rounded-md shadow hover:opacity-95"
+                >View Products</a
+              >
+              <a
+                href="#about"
+                class="px-5 py-3 rounded-md border dark:border-gray-600"
+                >About Us</a
+              >
+            </div>
+            <div class="mt-6 text-sm text-gray-600 dark:text-gray-300">
+              Call/WhatsApp:
+              <a href="tel:+919316873242" class="text-indigo-600"
+                >+91 93168 73242</a
+              >
+            </div>
+          </div>
+          <div
+            class="p-6 bg-white/80 dark:bg-gray-800/70 rounded-2xl shadow-lg"
+          >
+            <img
+              src="images/exec_bags/product.jpg"
+              alt="Executive bag sample"
+              class="w-full rounded-lg"
+              width="900"
+              height="680"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-semibold">Our Products</h2>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Click a product to request a quote.
+          </p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Lunch Boxes -->
+          <article
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden"
+          >
+            <img
+              src="images/lunchbox/product.jpg"
+              alt="Lunch Boxes"
+              class="product-img"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="p-4">
+              <h3 class="font-semibold">Lunch Boxes</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                Customized Lunch Box Available.
+              </p>
+              <div class="mt-4 flex gap-3">
+                <button
+                  class="requestBtn px-3 py-2 rounded-md bg-indigo-600 text-white text-sm"
+                  data-product="Lunch Boxes"
+                >
+                  Request Quote
+                </button>
+                <button
+                  class="viewBtn px-3 py-2 rounded-md border dark:border-gray-600 text-sm"
+                  data-images='[
+                  "images/lunchbox/001.jpg",
+                  "images/lunchbox/002.jpg",
+                  "images/lunchbox/003.jpg",
+                  "images/lunchbox/004.jpg",
+                  "images/lunchbox/005.jpg",
+                  "images/lunchbox/006.jpg",
+                  "images/lunchbox/007.jpg",
+                  "images/lunchbox/008.jpg",
+                  "images/lunchbox/009.jpg"
+                ]'
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bags -->
+          <article
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden"
+          >
+            <img
+              src="images/bags/product.jpg"
+              alt="Bags & Carry Bags"
+              class="product-img"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="p-4">
+              <h3 class="font-semibold">Bags</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                Personalized Bags & Carry Bags.
+              </p>
+              <div class="mt-4 flex gap-3">
+                <button
+                  class="requestBtn px-3 py-2 rounded-md bg-indigo-600 text-white text-sm"
+                  data-product="Bags"
+                >
+                  Request Quote
+                </button>
+                <button
+                  class="viewBtn px-3 py-2 rounded-md border dark:border-gray-600 text-sm"
+                  data-images='[
+                  "images/bags/0.jpg",
+                  "images/bags/1.jpg",
+                  "images/bags/2.jpg",
+                  "images/bags/3.jpg",
+                  "images/bags/4.jpg",
+                  "images/bags/5.jpg",
+                  "images/bags/6.jpg",
+                  "images/bags/7.jpg",
+                  "images/bags/8.jpg",
+                  "images/bags/9.jpg",
+                  "images/bags/10.jpg",
+                  "images/bags/11.jpg",
+                  "images/bags/12.jpg",
+                  "images/bags/13.jpg",
+                  "images/bags/14.jpg",
+                  "images/bags/15.jpg",
+                  "images/bags/16.jpg",
+                  "images/bags/17.jpg",
+                  "images/bags/18.jpg",
+                  "images/bags/19.jpg",
+                  "images/bags/20.jpg",
+                  "images/bags/21.jpg",
+                  "images/bags/22.jpg",
+                  "images/bags/23.jpg",
+                  "images/bags/24.jpg",
+                  "images/bags/25.jpg",
+                  "images/bags/26.jpg",
+                  "images/bags/27.jpg",
+                  "images/bags/28.jpg",
+                  "images/bags/29.jpg",
+                  "images/bags/30.jpg",
+                  "images/bags/31.jpg",
+                  "images/bags/32.jpg",
+                  "images/bags/33.jpg",
+                  "images/bags/34.jpg",
+                  "images/bags/35.jpg",
+                  "images/bags/36.jpg",
+                  "images/bags/37.jpg",
+                  "images/bags/38.jpg",
+                  "images/bags/39.jpg",
+                  "images/bags/40.jpg",
+                  "images/bags/41.jpg",
+                  "images/bags/42.jpg",
+                  "images/bags/43.jpg",
+                  "images/bags/44.jpg",
+                  "images/bags/45.jpg",
+                  "images/bags/46.jpg",
+                  "images/bags/47.jpg",
+                  "images/bags/48.jpg",
+                  "images/bags/49.jpg",
+                  "images/bags/50.jpg",
+                  "images/bags/51.jpg",
+                  "images/bags/52.jpg",
+                  "images/bags/53.jpg",
+                  "images/bags/54.jpg"
+                ]'
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Executive Bags -->
+          <article
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden"
+          >
+            <img
+              src="images/exec_bags/product.jpg"
+              alt="Executive Bags"
+              class="product-img"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="p-4">
+              <h3 class="font-semibold">Executive Bags</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                Executive Bags - Laptop Bags, Sling Bags etc.
+              </p>
+              <div class="mt-4 flex gap-3">
+                <button
+                  class="requestBtn px-3 py-2 rounded-md bg-indigo-600 text-white text-sm"
+                  data-product="Executive Bags"
+                >
+                  Request Quote
+                </button>
+                <button
+                  class="viewBtn px-3 py-2 rounded-md border dark:border-gray-600 text-sm"
+                  data-images='[
+                  "images/exec_bags/0.jpg",
+                  "images/exec_bags/1.jpg",
+                  "images/exec_bags/2.jpg",
+                  "images/exec_bags/3.jpg",
+                  "images/exec_bags/4.jpg",
+                  "images/exec_bags/5.jpg",
+                  "images/exec_bags/6.jpg",
+                  "images/exec_bags/7.jpg",
+                  "images/exec_bags/8.jpg",
+                  "images/exec_bags/9.jpg",
+                  "images/exec_bags/10.jpg",
+                  "images/exec_bags/11.jpg",
+                  "images/exec_bags/12.jpg",
+                  "images/exec_bags/13.jpg",
+                  "images/exec_bags/14.jpg",
+                  "images/exec_bags/15.jpg",
+                  "images/exec_bags/16.jpg",
+                  "images/exec_bags/17.jpg",
+                  "images/exec_bags/18.jpg",
+                  "images/exec_bags/19.jpg",
+                  "images/exec_bags/20.jpg",
+                  "images/exec_bags/21.jpg",
+                  "images/exec_bags/22.jpg",
+                  "images/exec_bags/23.jpg",
+                  "images/exec_bags/24.jpg",
+                  "images/exec_bags/25.jpg",
+                  "images/exec_bags/26.jpg",
+                  "images/exec_bags/27.jpg",
+                  "images/exec_bags/28.jpg",
+                  "images/exec_bags/29.jpg",
+                  "images/exec_bags/30.jpg",
+                  "images/exec_bags/31.jpg",
+                  "images/exec_bags/32.jpg",
+                  "images/exec_bags/33.jpg",
+                  "images/exec_bags/34.jpg",
+                  "images/exec_bags/35.jpg",
+                  "images/exec_bags/36.jpg",
+                  "images/exec_bags/37.jpg",
+                  "images/exec_bags/38.jpg",
+                  "images/exec_bags/39.jpg",
+                  "images/exec_bags/40.jpg",
+                  "images/exec_bags/41.jpg",
+                  "images/exec_bags/42.jpg",
+                  "images/exec_bags/43.jpg",
+                  "images/exec_bags/44.jpg",
+                  "images/exec_bags/45.jpg",
+                  "images/exec_bags/46.jpg",
+                  "images/exec_bags/47.jpg",
+                  "images/exec_bags/48.jpg",
+                  "images/exec_bags/49.jpg",
+                  "images/exec_bags/50.jpg",
+                  "images/exec_bags/51.jpg",
+                  "images/exec_bags/52.jpg",
+                  "images/exec_bags/53.jpg",
+                  "images/exec_bags/54.jpg",
+                  "images/exec_bags/55.jpg",
+                  "images/exec_bags/56.jpg",
+                  "images/exec_bags/57.jpg",
+                  "images/exec_bags/58.jpg",
+                  "images/exec_bags/59.jpg",
+                  "images/exec_bags/60.jpg",
+                  "images/exec_bags/61.jpg",
+                  "images/exec_bags/62.jpg",
+                  "images/exec_bags/63.jpg",
+                  "images/exec_bags/64.jpg",
+                  "images/exec_bags/65.jpg",
+                  "images/exec_bags/66.jpg",
+                  "images/exec_bags/67.jpg",
+                  "images/exec_bags/68.jpg"
+                ]'
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- LifeStyle Product -->
+          <article
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden"
+          >
+            <img
+              src="images/lifestyle/product.jpg"
+              alt="Lifestyle products"
+              class="product-img"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="p-4">
+              <h3 class="font-semibold">Lifestyle Products</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                Strategically Crafted Corporate Gift Items.
+              </p>
+              <div class="mt-4 flex gap-3">
+                <button
+                  class="requestBtn px-3 py-2 rounded-md bg-indigo-600 text-white text-sm"
+                  data-product="Lifestyle Products"
+                >
+                  Request Quote
+                </button>
+                <button
+                  class="viewBtn px-3 py-2 rounded-md border dark:border-gray-600 text-sm"
+                  data-images='[
+                  "images/lifestyle/0.jpg",
+                  "images/lifestyle/1.jpg",
+                  "images/lifestyle/2.jpg",
+                  "images/lifestyle/3.jpg",
+                  "images/lifestyle/4.jpg",
+                  "images/lifestyle/5.jpg",
+                  "images/lifestyle/6.jpg",
+                  "images/lifestyle/7.jpg",
+                  "images/lifestyle/8.jpg",
+                  "images/lifestyle/9.jpg",
+                  "images/lifestyle/10.jpg",
+                  "images/lifestyle/11.jpg",
+                  "images/lifestyle/12.jpg",
+                  "images/lifestyle/13.jpg",
+                  "images/lifestyle/14.jpg",
+                  "images/lifestyle/15.jpg",
+                  "images/lifestyle/16.jpg",
+                  "images/lifestyle/17.jpg",
+                  "images/lifestyle/18.jpg",
+                  "images/lifestyle/19.jpg",
+                  "images/lifestyle/20.jpg",
+                  "images/lifestyle/21.jpg",
+                  "images/lifestyle/22.jpg",
+                  "images/lifestyle/23.jpg",
+                  "images/lifestyle/24.jpg",
+                  "images/lifestyle/25.jpg",
+                  "images/lifestyle/26.jpg",
+                  "images/lifestyle/27.jpg",
+                  "images/lifestyle/28.jpg",
+                  "images/lifestyle/29.jpg",
+                  "images/lifestyle/30.jpg",
+                  "images/lifestyle/31.jpg",
+                  "images/lifestyle/32.jpg",
+                  "images/lifestyle/33.jpg",
+                  "images/lifestyle/34.jpg",
+                  "images/lifestyle/35.jpg",
+                  "images/lifestyle/36.jpg",
+                  "images/lifestyle/37.jpg",
+                  "images/lifestyle/38.jpg",
+                  "images/lifestyle/39.jpg",
+                  "images/lifestyle/40.jpg",
+                  "images/lifestyle/41.jpg",
+                  "images/lifestyle/42.jpg",
+                  "images/lifestyle/43.jpg",
+                  "images/lifestyle/44.jpg",
+                  "images/lifestyle/45.jpg",
+                  "images/lifestyle/46.jpg",
+                  "images/lifestyle/47.jpg",
+                  "images/lifestyle/48.jpg",
+                  "images/lifestyle/49.jpg",
+                  "images/lifestyle/50.jpg",
+                  "images/lifestyle/51.jpg",
+                  "images/lifestyle/52.jpg",
+                  "images/lifestyle/53.jpg",
+                  "images/lifestyle/54.jpg",
+                  "images/lifestyle/55.jpg",
+                  "images/lifestyle/56.jpg"
+                ]'
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pens -->
+          <article
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden"
+          >
+            <img
+              src="images/pens/product.jpg"
+              alt="Pens"
+              class="product-img"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="p-4">
+              <h3 class="font-semibold">Pens</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                Customized Pens Available.
+              </p>
+              <div class="mt-4 flex gap-3">
+                <button
+                  class="requestBtn px-3 py-2 rounded-md bg-indigo-600 text-white text-sm"
+                  data-product="Pens"
+                >
+                  Request Quote
+                </button>
+                <button
+                  class="viewBtn px-3 py-2 rounded-md border dark:border-gray-600 text-sm"
+                  data-images='[
+                  "images/pens/0.jpg",
+                  "images/pens/1.jpg",
+                  "images/pens/2.jpg",
+                  "images/pens/3.jpg",
+                  "images/pens/4.jpg",
+                  "images/pens/5.jpg",
+                  "images/pens/6.jpg",
+                  "images/pens/7.jpg"
+                ]'
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Keychains / Corporate Gifts -->
+          <article
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden"
+          >
+            <img
+              src="images/keychains/product.jpg"
+              alt="Corporate Gifts / Keychains"
+              class="product-img"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="p-4">
+              <h3 class="font-semibold">Keychains</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                Customized Keychains Available.
+              </p>
+              <div class="mt-4 flex gap-3">
+                <button
+                  class="requestBtn px-3 py-2 rounded-md bg-indigo-600 text-white text-sm"
+                  data-product="Corporate Gifts"
+                >
+                  Request Quote
+                </button>
+                <button
+                  class="viewBtn px-3 py-2 rounded-md border dark:border-gray-600 text-sm"
+                  data-images='[
+                  "images/keychains/0.jpg",
+                  "images/keychains/1.jpg",
+                  "images/keychains/2.jpg",
+                  "images/keychains/3.jpg"
+                ]'
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US (replaces Gallery) -->
+    <section id="about" class="py-16 bg-gray-50 dark:bg-gray-900/30">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 class="text-3xl font-bold">About City Gift Advertiser</h2>
+            <p class="mt-4 text-gray-700 dark:text-gray-300">
+              We’re a Punjab-based corporate gifting & branding studio helping
+              businesses turn everyday items into memorable brand touchpoints.
+              From bags and lunch boxes to pens and lifestyle products, we
+              deliver high-quality customization with quick turnaround and
+              bulk-friendly pricing.
+            </p>
+            <p class="mt-3 text-gray-700 dark:text-gray-300">
+              Founded in <span id="foundedYear">2017</span>, we’ve been serving
+              organizations across India for
+              <strong><span id="yearsInBiz"></span>+ years</strong>. Our process
+              is simple—understand your brief, share a free mockup, and deliver
+              on time.
+            </p>
+
+            <dl class="mt-6 grid grid-cols-2 gap-4">
+              <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm">
+                <dt class="text-sm text-gray-600 dark:text-gray-400">
+                  Corporate Clients
+                </dt>
+                <dd class="text-2xl font-semibold">200+</dd>
+              </div>
+              <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm">
+                <dt class="text-sm text-gray-600 dark:text-gray-400">
+                  Items Delivered
+                </dt>
+                <dd class="text-2xl font-semibold">50k+</dd>
+              </div>
+            </dl>
+
+            <div class="mt-6">
+              <a
+                href="#contact"
+                class="inline-block bg-indigo-600 text-white px-5 py-3 rounded-md shadow hover:opacity-95"
+                >Get a Quote</a
+              >
+            </div>
+          </div>
+
+          <div class="p-2">
+            <figure
+              class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow"
+            >
+              <img
+                src="images/team.jpg"
+                alt="City Gift Advertiser team at the workshop"
+                class="w-full object-cover"
+                width="900"
+                height="680"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption class="p-4 text-sm text-gray-600 dark:text-gray-300">
+                Our team in Patel Nagar, Abohar — passionate about quality
+                printing & branding.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / REQUEST FORM -->
+    <section id="contact" class="py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h2 class="text-2xl font-semibold">Request a Quote / Contact Us</h2>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+              Tell us what you need — we'll reply with pricing and lead time.
+            </p>
+
+            <ul class="mt-6 text-sm text-gray-700 dark:text-gray-300 space-y-2">
+              <li>✅ Fast turnaround for corporate orders</li>
+              <li>✅ Minimum order quantities depend on product</li>
+              <li>✅ Free mockup for bulk orders</li>
+            </ul>
+
+            <div class="mt-6 text-sm text-gray-600 dark:text-gray-300">
+              <strong>Address:</strong> Patel Nagar, Abohar, Punjab<br />
+              <strong>Email:</strong>
+              <a
+                href="mailto:citygiftabohar2017@gmail.com"
+                class="text-indigo-400 underline"
+                >citygiftabohar2017@gmail.com</a
+              >
+            </div>
+          </div>
+
+          <form
+            id="requestForm"
+            class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow"
+            onsubmit="submitForm(event)"
+          >
+            <input type="hidden" id="productField" name="product" />
+            <div class="space-y-3">
+              <div>
+                <label class="text-sm" for="name">Name</label>
+                <input
+                  required
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  class="mt-1 block w-full border rounded-md px-3 py-2 bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700"
+                />
+              </div>
+              <div>
+                <label class="text-sm" for="email">Email</label>
+                <input
+                  required
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  class="mt-1 block w-full border rounded-md px-3 py-2 bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700"
+                />
+              </div>
+              <div>
+                <label class="text-sm" for="phone">Phone</label>
+                <input
+                  required
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="tel"
+                  pattern="[0-9+\-\s]{7,15}"
+                  autocomplete="tel"
+                  class="mt-1 block w-full border rounded-md px-3 py-2 bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700"
+                />
+              </div>
+              <div>
+                <label class="text-sm" for="productInput"
+                  >Product / Details</label
+                >
+                <input
+                  id="productInput"
+                  name="productInput"
+                  class="mt-1 block w-full border rounded-md px-3 py-2 bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700"
+                  placeholder="e.g. 50 ceramic mugs with logo"
+                />
+              </div>
+              <div>
+                <label class="text-sm" for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="3"
+                  class="mt-1 block w-full border rounded-md px-3 py-2 bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700"
+                ></textarea>
+              </div>
+              <div class="flex items-center gap-3">
+                <button
+                  type="submit"
+                  class="bg-indigo-600 text-white px-4 py-2 rounded-md"
+                >
+                  Send Request
+                </button>
+                <button
+                  type="button"
+                  id="clearBtn"
+                  class="px-4 py-2 border dark:border-gray-600 rounded-md"
+                >
+                  Clear
+                </button>
+              </div>
+              <p
+                id="formStatus"
+                class="text-sm text-green-600 dark:text-green-400 hidden"
+                aria-live="polite"
+              >
+                Thanks! We'll get back to you soon.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white dark:bg-black py-6">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-4"
+      >
+        <div>
+          © <span id="year"></span> City Gift Advertiser — All rights reserved
+        </div>
+        <div class="text-sm">
+          <a href="#" class="mr-4 hover:underline">Privacy</a>
+          <a href="#" class="hover:underline">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="hidden lb" aria-hidden="true">
+      <div class="lb-inner" role="dialog" aria-modal="true">
+        <button class="close-btn" id="lbClose" aria-label="Close">✕</button>
+        <button class="nav prev" id="lbPrev" aria-label="Previous">❮</button>
+        <img id="lbImg" src="" alt="preview" />
+        <button class="nav next" id="lbNext" aria-label="Next">❯</button>
+      </div>
+    </div>
+
+    <script>
+      // year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // compute years in business (edit foundedYear if needed)
+      const foundedYear = 2017;
+      const nowYear = new Date().getFullYear();
+      const yearsEl = document.getElementById("yearsInBiz");
+      const fyEl = document.getElementById("foundedYear");
+      if (yearsEl) yearsEl.textContent = Math.max(0, nowYear - foundedYear);
+      if (fyEl) fyEl.textContent = foundedYear;
+
+      // mobile menu toggle + ARIA
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn &&
+        menuBtn.addEventListener("click", () => {
+          const wasHidden = mobileMenu.classList.toggle("hidden");
+          menuBtn.setAttribute("aria-expanded", String(!wasHidden));
+        });
+
+      // Request button fill product field & scroll to contact
+      document.querySelectorAll(".requestBtn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          const product = e.currentTarget.dataset.product;
+          document.getElementById("productInput").value = product;
+          document.getElementById("productField").value = product;
+          location.hash = "#contact";
+          document.getElementById("name").focus();
+        });
+      });
+
+      // Lightbox shared state
+      const lightbox = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lbImg");
+      const lbPrev = document.getElementById("lbPrev");
+      const lbNext = document.getElementById("lbNext");
+      const lbClose = document.getElementById("lbClose");
+      let currentList = [];
+      let currentIndex = 0;
+      let lastFocus = null;
+
+      function openLightboxWith(list, index) {
+        if (!list || list.length === 0) return;
+        lastFocus = document.activeElement;
+        currentList = list;
+        currentIndex = index || 0;
+        lbImg.src = currentList[currentIndex];
+        lightbox.classList.remove("hidden");
+        lightbox.setAttribute("aria-hidden", "false");
+        lbClose.focus();
+      }
+
+      document.querySelectorAll(".viewBtn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          try {
+            const arr = JSON.parse(btn.dataset.images);
+            openLightboxWith(arr, 0);
+          } catch (err) {
+            console.error("Invalid data-images for viewBtn", err);
+          }
+        });
+      });
+
+      function showIndex(i) {
+        if (!currentList || currentList.length === 0) return;
+        currentIndex = (i + currentList.length) % currentList.length;
+        lbImg.style.opacity = 0;
+        setTimeout(() => {
+          lbImg.src = currentList[currentIndex];
+          lbImg.style.opacity = 1;
+        }, 150);
+      }
+      lbNext.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showIndex(currentIndex + 1);
+      });
+      lbPrev.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showIndex(currentIndex - 1);
+      });
+
+      function closeLb() {
+        lightbox.classList.add("hidden");
+        lightbox.setAttribute("aria-hidden", "true");
+        lbImg.src = "";
+        currentList = [];
+        currentIndex = 0;
+        if (lastFocus) lastFocus.focus();
+      }
+      lbClose.addEventListener("click", (e) => {
+        e.stopPropagation();
+        closeLb();
+      });
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLb();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (lightbox.classList.contains("hidden")) return;
+        if (e.key === "Escape") closeLb();
+        if (e.key === "ArrowRight") showIndex(currentIndex + 1);
+        if (e.key === "ArrowLeft") showIndex(currentIndex - 1);
+        if (e.key === "Tab") {
+          const focusables = [lbClose, lbPrev, lbNext];
+          const i = focusables.indexOf(document.activeElement);
+          if (e.shiftKey && i <= 0) {
+            e.preventDefault();
+            focusables[focusables.length - 1].focus();
+          } else if (!e.shiftKey && i === focusables.length - 1) {
+            e.preventDefault();
+            focusables[0].focus();
+          }
+        }
+      });
+
+      // ===== HERO ROTATOR =====
+      const HERO_IMAGES = [
+        "https://images.unsplash.com/photo-1536305030010-6d2b8a3f8b47?q=80&w=1600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1520975911073-7a6ceff3c2a3?q=80&w=1600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1603988363607-e1e3b9a7a8f0?q=80&w=1600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1590080875831-f32d762bfbfc?q=80&w=1600&auto=format&fit=crop",
+      ];
+      const ROTATE_MS = 4500;
+      const START_DELAY_MS = 300;
+
+      (function initHeroRotator() {
+        const container = document.getElementById("hero-rotator");
+        if (!container || !HERO_IMAGES.length) return;
+
+        const prefersReduced =
+          window.matchMedia &&
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        const slides = HERO_IMAGES.map((url, i) => {
+          const s = document.createElement("div");
+          s.className = "slide" + (i === 0 ? " is-active" : "");
+          s.style.backgroundImage = `url("${url}")`;
+          container.appendChild(s);
+          return s;
+        });
+
+        if (prefersReduced || HERO_IMAGES.length < 2) return;
+
+        HERO_IMAGES.slice(1).forEach((src) => {
+          const img = new Image();
+          img.decoding = "async";
+          img.src = src;
+        });
+
+        let idx = 0,
+          timer = null;
+        const step = () => {
+          const next = (idx + 1) % slides.length;
+          slides[idx].classList.remove("is-active");
+          slides[next].classList.add("is-active");
+          idx = next;
+        };
+        const start = () => {
+          timer = window.setInterval(step, ROTATE_MS);
+        };
+        const stop = () => {
+          if (timer) {
+            window.clearInterval(timer);
+            timer = null;
+          }
+        };
+
+        setTimeout(start, START_DELAY_MS);
+        document.addEventListener(
+          "visibilitychange",
+          () => {
+            if (document.hidden) stop();
+            else if (!timer) start();
+          },
+          { passive: true }
+        );
+        container.addEventListener("mouseenter", stop, { passive: true });
+        container.addEventListener(
+          "mouseleave",
+          () => {
+            if (!timer) start();
+          },
+          { passive: true }
+        );
+      })();
+
+      // ===== THEME TOGGLE =====
+      (function () {
+        const btn = document.getElementById("themeToggle");
+        if (!btn) return;
+
+        const sun = document.getElementById("themeIconSun");
+        const moon = document.getElementById("themeIconMoon");
+
+        function apply(icon) {
+          if (!sun || !moon) return;
+          if (icon === "sun") {
+            sun.classList.remove("hidden");
+            moon.classList.add("hidden");
+          } else {
+            moon.classList.remove("hidden");
+            sun.classList.add("hidden");
+          }
+        }
+
+        function setTheme(next) {
+          const root = document.documentElement;
+          if (next === "dark") {
+            root.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+            btn.setAttribute("aria-pressed", "true");
+            apply("sun");
+          } else {
+            root.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+            btn.setAttribute("aria-pressed", "false");
+            apply("moon");
+          }
+        }
+
+        const isDark = document.documentElement.classList.contains("dark");
+        setTheme(isDark ? "dark" : "light");
+
+        btn.addEventListener("click", () =>
+          setTheme(
+            document.documentElement.classList.contains("dark")
+              ? "light"
+              : "dark"
+          )
+        );
+      })();
+
+      // Simple form submit to WhatsApp, with safe encoding
+      async function submitForm(e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const product = document.getElementById("productInput").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+          alert("Please enter a valid email.");
+          return;
+        }
+        if (!/^[0-9+\-\s]{7,15}$/.test(phone)) {
+          alert("Please enter a valid phone.");
+          return;
+        }
+
+        const clientNumber = "919316873242";
+
+        const text = [
+          "*New Product Inquiry*",
+          "--------------------",
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Phone: ${phone}`,
+          `Product: ${product || "(not specified)"}`,
+          `Message: ${message || "-"}`,
+        ].join("\n");
+
+        const url = `https://wa.me/${clientNumber}?text=${encodeURIComponent(
+          text
+        )}`;
+        const w = window.open(url, "_blank", "noopener,noreferrer");
+        if (w) w.opener = null;
+
+        document.getElementById("formStatus").classList.remove("hidden");
+      }
+
+      // clear button
+      document
+        .getElementById("clearBtn")
+        .addEventListener("click", () =>
+          document.getElementById("requestForm").reset()
+        );
+    </script>
+  </body>
+</html>
