@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog – City Gift Advertiser | Corporate Gifting Tips</title>
+    <meta
+      name="description"
+      content="Read the latest trends in corporate gifting, customized diaries, and branding strategies for 2026 in Punjab and India."
+    />
+    <link rel="icon" href="/logo.png" type="image/png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+
+    <style>
+      /* Keeping your original animations and styles */
+      .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        padding-bottom: 0.1em;
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .dark .glass-effect {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(79, 70, 229, 0.2);
+      }
+      /* Mobile Menu transition */
+      #mobileMenu {
+        transition: all 0.3s ease-in-out;
+      }
+    </style>
+
+    <script>
+      (function () {
+        try {
+          const s = sessionStorage.getItem("theme");
+          const d = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (s === "dark" || (!s && d)) {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+          }
+        } catch (_) {}
+      })();
+    </script>
+  </head>
+
+  <body
+    class="font-sans antialiased bg-gradient-to-br from-gray-50 via-white to-indigo-50 text-gray-800 dark:bg-gradient-to-br dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950 dark:text-gray-100 flex flex-col min-h-screen"
+  >
+    <nav class="glass-effect sticky top-0 z-40 shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center gap-6">
+            <a href="index.html" class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-xl"
+              >
+                CG
+              </div>
+              <div class="text-2xl font-bold gradient-text">
+                City Gift Advertiser
+              </div>
+            </a>
+            <div class="hidden lg:flex items-center gap-8 text-sm font-medium">
+              <a
+                href="index.html"
+                class="hover:text-indigo-600 transition-colors"
+                >Home</a
+              >
+              <a
+                href="index.html#products"
+                class="hover:text-indigo-600 transition-colors"
+                >Products</a
+              >
+              <a
+                href="index.html#process"
+                class="hover:text-indigo-600 transition-colors"
+                >Process</a
+              >
+
+              <a
+                href="blog.html"
+                class="text-indigo-600 dark:text-indigo-400 font-bold border-b-2 border-indigo-600 dark:border-indigo-400"
+                >Blog</a
+              >
+
+              <a
+                href="index.html#about"
+                class="hover:text-indigo-600 transition-colors"
+                >About</a
+              >
+              <a
+                href="index.html#contact"
+                class="hover:text-indigo-600 transition-colors"
+                >Contact</a
+              >
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <a
+              href="https://wa.me/919316873242"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-lg hover:shadow-xl transition-all hover:scale-105"
+              ><span>💬</span> WhatsApp</a
+            >
+            <button
+              id="themeToggle"
+              class="p-2.5 rounded-full glass-effect hover:scale-110 transition-transform"
+              aria-label="Toggle dark mode"
+            >
+              <span id="themeIconSun" class="hidden text-xl">☀️</span>
+              <span id="themeIconMoon" class="text-xl">🌙</span>
+            </button>
+            <button
+              id="menuBtn"
+              class="lg:hidden p-2.5 rounded-full glass-effect"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+              aria-label="Toggle menu"
+            >
+              <span class="text-xl">☰</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobileMenu" class="hidden lg:hidden px-4 pb-4 space-y-2">
+        <a
+          href="index.html"
+          class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors"
+          >Home</a
+        >
+        <a
+          href="index.html#products"
+          class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors"
+          >Products</a
+        >
+        <a
+          href="blog.html"
+          class="block py-2.5 px-4 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 font-bold"
+          >Blog</a
+        >
+        <a
+          href="index.html#about"
+          class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors"
+          >About</a
+        >
+        <a
+          href="index.html#contact"
+          class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <header class="pt-20 pb-12 text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 gradient-text">
+        Corporate Gifting Insights
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Tips, trends, and strategies to elevate your brand presence in 2026.
+      </p>
+    </header>
+
+    <section class="py-12 px-4 sm:px-6 flex-grow">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <article
+          class="blog-card glass-effect rounded-2xl overflow-hidden transition-all duration-300"
+        >
+          <div class="h-48 bg-gray-200 dark:bg-gray-800 overflow-hidden">
+            <img
+              src="images/blog/cover1.png"
+              alt="Corporate Gifts Chandigarh"
+              class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </div>
+          <div class="p-6">
+            <div class="text-xs font-semibold text-indigo-500 mb-2">
+              LOCATION SPOTLIGHT
+            </div>
+            <h2 class="text-xl font-bold mb-3">
+              Best Corporate Diaries Supplier in Chandigarh & Mohali
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
+              Are you looking for premium 2026 diaries in the Tri-city area?
+              Discover how local businesses are using custom branding to stand
+              out...
+            </p>
+            <a
+              href="blog-chandigarh.html"
+              class="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline text-sm"
+              >Read More →</a
+            >
+          </div>
+        </article>
+
+        <article
+          class="blog-card glass-effect rounded-2xl overflow-hidden transition-all duration-300"
+        >
+          <div class="h-48 bg-gray-200 dark:bg-gray-800 overflow-hidden">
+            <img
+              src="images/blog/cover2.png"
+              alt="2026 Diaries"
+              class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </div>
+          <div class="p-6">
+            <div class="text-xs font-semibold text-purple-500 mb-2">
+              NEW ARRIVALS
+            </div>
+            <h2 class="text-xl font-bold mb-3">
+              Why Customized Diaries are the Best Business Gift for 2026
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
+              A diary stays on your client's desk for 365 days. Here is why
+              upgrading to premium leather covers and gold foiling is the best
+              ROI...
+            </p>
+            <a
+              href="#"
+              class="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline text-sm"
+              >Coming Soon</a
+            >
+          </div>
+        </article>
+
+        <article
+          class="blog-card glass-effect rounded-2xl overflow-hidden transition-all duration-300"
+        >
+          <div class="h-48 bg-gray-200 dark:bg-gray-800 overflow-hidden">
+            <img
+              src="images/blog/cover3.png"
+              alt="Wholesale Gifts Rajasthan"
+              class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </div>
+          <div class="p-6">
+            <div class="text-xs font-semibold text-pink-500 mb-2">
+              WHOLESALE GUIDE
+            </div>
+            <h2 class="text-xl font-bold mb-3">
+              Bulk Corporate Gifting in <br />Sri Ganganagar & Bikaner
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
+              From fast delivery to bulk discounts, learn how we serve
+              businesses across Rajasthan with high-quality printing services...
+            </p>
+            <a
+              href="#"
+              class="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline text-sm"
+              >Coming Soon</a
+            >
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="bg-gray-950 text-gray-200 pt-14 pb-8 mt-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-lg"
+              >
+                CG
+              </div>
+              <h3 class="text-xl font-bold">City Gift Advertiser</h3>
+            </div>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Customized 2026 corporate diaries, calendars and promotional gifts
+              in Abohar, Punjab.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>
+                <a href="index.html" class="hover:text-indigo-400">Home</a>
+              </li>
+              <li>
+                <a href="index.html#products" class="hover:text-indigo-400"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a href="index.html#process" class="hover:text-indigo-400"
+                  >Process</a
+                >
+              </li>
+              <li>
+                <a href="index.html#about" class="hover:text-indigo-400"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="index.html#contact" class="hover:text-indigo-400"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-lg mb-4">Contact</h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>Patel Nagar, Abohar, Punjab</li>
+              <li>
+                <a href="tel:+919316873242" class="hover:text-indigo-400">
+                  +91 93168 73242
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:citygiftabohar2017@gmail.com"
+                  class="hover:text-indigo-400"
+                >
+                  citygiftabohar2017@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+            <div class="flex gap-4">
+              <a
+                href="https://www.instagram.com/citygiftadvertiser/"
+                target="_blank"
+                aria-label="Instagram"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-indigo-600 transition"
+              >
+                <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                  <path
+                    d="M7.75 2h8.5C19.99 2 22 4.01 22 6.25v11.5C22 19.99 19.99 22 17.75 22h-11.5C4.01 22 2 19.99 2 17.75v-11.5C2 4.01 4.01 2 6.25 2h1.5zm4.25 5a5 5 0 100 10 5 5 0 000-10zm0 8.25a3.25 3.25 0 110-6.5 3.25 3.25 0 010 6.5zM17.5 6.5a1 1 0 100-2 1 1 0 000 2z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/city-gift-advertiser/"
+                target="_blank"
+                aria-label="LinkedIn"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-indigo-600 transition"
+              >
+                <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                  <path
+                    d="M4.98 3.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM3 8.98h3.96V21H3V8.98zm7.03 0h3.79v1.64h.05c.53-1 1.82-2.05 3.74-2.05 4 0 4.74 2.63 4.74 6.05V21h-3.96v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21h-3.96V8.98z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://wa.me/919316873242"
+                target="_blank"
+                aria-label="WhatsApp"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-green-600 transition"
+              >
+                <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                  <path
+                    d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.41 0 .02 5.39.02 12.02c0 2.12.55 4.2 1.6 6.04L0 24l6.14-1.6a11.97 11.97 0 005.9 1.5h.01c6.63 0 12.02-5.39 12.02-12.02 0-3.2-1.25-6.21-3.55-8.4z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="mailto:citygiftabohar2017@gmail.com"
+                aria-label="Email"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-indigo-600 transition"
+              >
+                <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                  <path d="M2 4h20v16H2V4zm10 9L4 6v12h16V6l-8 7z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-gray-500"
+        >
+          <div>
+            © <span id="year"></span> City Gift Advertiser. All rights reserved.
+          </div>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-indigo-400">Privacy Policy</a>
+            <a href="#" class="hover:text-indigo-400">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Year Logic
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu Logic (Copied from Index)
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          const hidden = mobileMenu.classList.toggle("hidden");
+          menuBtn.setAttribute("aria-expanded", String(!hidden));
+        });
+      }
+
+      // Theme Toggle Logic (Copied from Index)
+      (function () {
+        const btn = document.getElementById("themeToggle");
+        const sun = document.getElementById("themeIconSun");
+        const moon = document.getElementById("themeIconMoon");
+
+        function setTheme(next) {
+          const root = document.documentElement;
+          if (next === "dark") {
+            root.classList.add("dark");
+            sessionStorage.setItem("theme", "dark");
+            sun.classList.remove("hidden");
+            moon.classList.add("hidden");
+          } else {
+            root.classList.remove("dark");
+            sessionStorage.setItem("theme", "light");
+            moon.classList.remove("hidden");
+            sun.classList.add("hidden");
+          }
+        }
+
+        const isDark = document.documentElement.classList.contains("dark");
+        setTheme(isDark ? "dark" : "light");
+
+        if (btn)
+          btn.addEventListener("click", () =>
+            setTheme(
+              document.documentElement.classList.contains("dark")
+                ? "light"
+                : "dark"
+            )
+          );
+      })();
+    </script>
+  </body>
+</html>
